@@ -11,6 +11,8 @@
 		FAD07517286A2E760089C59E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD07516286A2E760089C59E /* ContentView.swift */; };
 		FAD07519286A2E770089C59E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD07518286A2E770089C59E /* Assets.xcassets */; };
 		FAD0751C286A2E770089C59E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD0751B286A2E770089C59E /* Preview Assets.xcassets */; };
+		FAD07524286A2F640089C59E /* OnboardingView-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD07523286A2F640089C59E /* OnboardingView-1.swift */; };
+		FAD07526286A2F820089C59E /* OnboardingView-2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD07525286A2F820089C59E /* OnboardingView-2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		FAD07516286A2E760089C59E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FAD07518286A2E770089C59E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD0751B286A2E770089C59E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAD07523286A2F640089C59E /* OnboardingView-1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView-1.swift"; sourceTree = "<group>"; };
+		FAD07525286A2F820089C59E /* OnboardingView-2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView-2.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		FAD07513286A2E760089C59E /* SwagPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				FAD07522286A2F270089C59E /* Onboarding */,
 				FAD07514286A2E760089C59E /* SwagPhotosApp.swift */,
 				FAD07516286A2E760089C59E /* ContentView.swift */,
 				FAD07518286A2E770089C59E /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				FAD0751B286A2E770089C59E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAD07522286A2F270089C59E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FAD07523286A2F640089C59E /* OnboardingView-1.swift */,
+				FAD07525286A2F820089C59E /* OnboardingView-2.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			files = (
 				FAD07517286A2E760089C59E /* ContentView.swift in Sources */,
 				FAD07515286A2E760089C59E /* SwagPhotosApp.swift in Sources */,
+				FAD07526286A2F820089C59E /* OnboardingView-2.swift in Sources */,
+				FAD07524286A2F640089C59E /* OnboardingView-1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
