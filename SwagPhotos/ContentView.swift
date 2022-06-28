@@ -12,9 +12,25 @@ struct ContentView: View {
         (UIApplication.shared.connectedScenes.first as?UIWindowScene)?.windows.first!.overrideUserInterfaceStyle = .dark
     }
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .navigationBarHidden(true)
+        ScrollView{
+            
+            
+            
+        }
+        HStack{
+            VStack{
+                Text("Swag Photos").foregroundColor(.white).font(.title2)
+                Text("See whats coming in the next update").foregroundColor(.white).font(.subheadline)
+
+                Link("View Our Terms of Service",
+                      destination: URL(string: "https://www.example.com/TOS.html")!)
+
+          
+            
+        }
+       
+        }
+    
     }
 }
 
