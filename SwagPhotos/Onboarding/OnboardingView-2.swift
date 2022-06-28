@@ -11,39 +11,43 @@ struct OnboardingView_2: View {
     @State var isActive = false
     var body: some View {
        ZStack {
-            Color.black
-            .ignoresSafeArea()
-           
-            VStack {
-                
-        
-                Image("GroupPic").resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 300, height: 400, alignment: .center)
-                
-                
-                Text("Welcon and thanks for joining SwagPhotos").foregroundColor(.white).font(.title3).multilineTextAlignment(.center)
-                
-                Spacer()
-                NavigationLink(destination: ContentView(),isActive: $isActive) {
-                    Button {
-                       isActive = true
-                    } label: {
-                        Image(systemName: "chevron.forward").foregroundColor(.white)
-                        
-                        
-                    }
-
-                           
-                }
+           Color.black
+           .ignoresSafeArea()
+           VStack {
+               Shape().overlay{
                    
-                
+                   Image("IMG1").resizable()
+                       .aspectRatio(contentMode: .fit)
+                       .frame(width: 300, height: 400, alignment: .center)
+                   
+               }
 
+               Spacer()
+               //Easy to use
+               Text("Easy to use").font(.custom("Eina01-Bold ☞", size: 30.4)).foregroundColor(.white).multilineTextAlignment(.center)
                
-            }
-            
-            
-        }
+               //Lorem ipsum dolor sit amet...
+               Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.").font(.custom("Eina01-Regular ☞", size: 17.8)).foregroundColor(.white).multilineTextAlignment(.center).padding()
+              Spacer(minLength: 5)
+               NavigationLink(destination: ContentView(),isActive: $isActive) {
+                   Button {
+                      isActive = true
+                   } label: {
+                       Image(systemName: "chevron.forward").foregroundColor(.white)
+                       
+                       
+                   }
+
+                           }
+                  
+               
+
+              
+           }
+           
+           
+       }.navigationBarHidden(false)
+
         
     }
 }
