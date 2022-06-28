@@ -20,7 +20,7 @@ struct OnboardingView_1: View {
                         
                         Image("IMG1").resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 300, height: 400, alignment: .center)
+                            .frame(width: 250, height: 300, alignment: .center)
                         
                     }
                     

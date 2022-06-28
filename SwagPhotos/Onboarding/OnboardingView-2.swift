@@ -16,9 +16,9 @@ struct OnboardingView_2: View {
            VStack {
                Shape().overlay{
                    
-                   Image("IMG1").resizable()
+                   Image("IMG3").resizable()
                        .aspectRatio(contentMode: .fit)
-                       .frame(width: 300, height: 400, alignment: .center)
+                       .frame(width: 300, height: 200, alignment: .center)
                    
                }
 

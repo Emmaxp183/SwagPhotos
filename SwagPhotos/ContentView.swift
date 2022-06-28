@@ -8,28 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let columns = [GridItem(.flexible()),GridItem(.flexible())]
+    
+    
     init(){
         (UIApplication.shared.connectedScenes.first as?UIWindowScene)?.windows.first!.overrideUserInterfaceStyle = .dark
     }
     var body: some View {
-        ScrollView{
-            
-            
-            
-        }
-        HStack{
-            VStack{
-                Text("Swag Photos").foregroundColor(.white).font(.title2)
-                Text("See whats coming in the next update").foregroundColor(.white).font(.subheadline)
+        GeometryReader { geo in
+            ScrollView{
+                LazyVGrid(columns: columns){
+                   
+                    ForEach(1...5, id: \.self){ i in
+                        Color.blue.frame(width: geo.size.width/2, height: geo.size.height/2)
+                    }
+                   
+                    
+                }
+                
+               
+                HStack{
+                    VStack{
+                        Text("Swag Photos").foregroundColor(.white).font(.title2)
+                        Text("See whats coming in the next update").foregroundColor(.white).font(.subheadline)
 
-                Link("View Our Terms of Service",
-                      destination: URL(string: "https://www.example.com/TOS.html")!)
+                        Link("View Our Terms of Service",
+                              destination: URL(string: "https://www.example.com/TOS.html")!)
 
-          
-            
+                  
+                    
+                }
+                
+                
+            }
         }
        
-        }
+       
+        }.navigationBarHidden(true)
     
     }
 }
@@ -37,5 +53,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
