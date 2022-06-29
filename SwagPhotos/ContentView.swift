@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var OpenMenu = false
+    
     let columns = [GridItem(.flexible()),GridItem(.flexible())]
     
     
@@ -45,8 +47,29 @@ struct ContentView: View {
         }
        
        
-        }.navigationBarHidden(true)
-    
+        }.navigationBarItems(trailing: Button(action: {
+           OpenMenu = true
+        }, label: {
+            Image(systemName: "chevron.down")
+        }))
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $OpenMenu, content:{
+            
+            ZStack{
+                VStack(spacing: 10){
+                    Button(action: {}, label: {Text("About").font(.title).padding()})
+                    Button(action: {}, label: {Text("Privacy Policy").font(.title)})
+                    Button(action: {}, label: {Text("License Agreement").font(.title)})
+                    Spacer()
+                    Text("App Version 1.0").font(.subheadline).padding()
+                }
+                
+                
+            }
+            
+        })
+        
     }
 }
 
